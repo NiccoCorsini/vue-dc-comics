@@ -1,0 +1,96 @@
+@import "../style/var";
+@import "../style/functions";
+
+.top{
+    .container{
+        display: flex;
+    }
+    height: 350px;
+    background-image: url("../assets/img/footer-bg.jpg");
+    background-size: cover;
+    overflow: hidden;
+    
+    .left{
+        padding: 2rem 0 1rem;
+        width: 50%;
+        color: white;
+        height: 350px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        .col{
+            margin-right: 15px;
+            ul{
+                li{
+                    padding: 1px 0;
+                    a{
+                    color: gray;
+                    transition: color 300ms;
+                    &:hover{
+                        color: $primary-color;
+                    }
+                    }
+                    &:first-child{
+                        margin: 0.8rem 0;
+                    }
+                }
+            }
+        }
+    }
+    .right{
+        width: 50%;
+        
+        text-align: right;
+        img{
+            width: 500px;
+            transform: translateY(-70px);
+        }
+    }
+}
+.bottom{
+    background: #303030;
+    .container{
+        display: flex;
+        align-items: center;
+        padding: 2rem 0;
+    }
+    button{
+        color: white;
+        background: transparent;
+        border: 2px solid $primary-color;
+        text-transform: uppercase;
+        outline: none;
+        padding: 10px 20px;
+        font-weight: 500;
+        cursor: pointer;
+        @include traScale();
+    }
+    .left{
+        width: 50%;
+    }
+    .right{
+        width: 50%;
+        ul{
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            li{
+                margin-left: 15px;
+                a{
+                    img{
+                        @include traScale();
+                    }
+                }
+                &:first-child{
+                    text-transform: uppercase;
+                    padding-right: 10px;
+                    @include traScale();
+                    a{  
+                        color: $primary-color;
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+    }
+}

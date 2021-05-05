@@ -1,0 +1,45 @@
+@import "../style/var";
+
+header {
+    display: flex;
+    align-items: center;
+}
+
+.left{
+    width: 20%;
+}
+
+.right{
+    width: 80%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.left img{
+    width: 60px;
+}
+
+.right ul{
+    display: flex;
+}
+
+li a{
+    color: #74747e;
+    padding: 3rem 0;
+    display: block;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 500;
+    border-bottom: 5px solid transparent;
+    transition: all 400ms;
+}
+
+li:not(:last-child){
+    margin-right: 1.4rem;
+}
+
+li a:hover,
+li a.active{
+    color: $primary-color;
+    border-bottom: solid 5px $primary-color;
+}
